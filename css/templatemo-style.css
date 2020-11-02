@@ -135,10 +135,8 @@ a:focus {
 /* Hero */
 
 #hero {
-    background-image: url(https://source.unsplash.com/1920x1080/?interior,room?color=Grey);
+    background-image: url(https://source.unsplash.com/1920x1080/?interior,room?color=black);
     background-repeat: no-repeat;
-    opacity: 70%;
-    filter: contrast(0.9);
     height: 100vh;
     min-height: 375px;
     position: relative;
