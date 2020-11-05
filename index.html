@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- https://script.google.com/macros/s/AKfycbxNe6XeEwZnlS-EwnGvJ3B0c-O2mjsCeKLyEIYN0T7DucP96xaD/exec -->
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,26 +13,31 @@
     <link rel="stylesheet" href="slick/slick-theme.css">
     <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/rajat.css">
     <link rel="stylesheet" href="css/templatemo-style.css" />
     <!--
 	The Town
 	https://templatemo.com/tm-525-the-town
-	-->
+    -->
 </head>
 
 <body>
     <!-- Hero section -->
     <section id="hero" class="text-white tm-font-big tm-parallax darkColor">
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
+        <nav class="navbar header-1 navbar-expand-md tm-navbar" id="tmNav">
             <div class="container">
                 <div class="tm-next">
-                    <a href="#hero" class="navbar-brand"> MY Perfect Spaces </a>
+                    <a href="#hero" class="navbar-brand">
+                        <div class="logo">
+                            <a href="index.html"><img src="img/Logo.svg" alt="logo"></a>
+                        </div>
+                    </a>
                 </div>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars navbar-toggler-icon"></i>
-          </button>
+                    <i class="fas fa-bars navbar-toggler-icon"></i>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
@@ -52,20 +59,70 @@
         </nav>
 
         <div class="text-center tm-hero-text-container">
-            <div class="tm-hero-text-container-inner">
+            <!-- <div class="tm-hero-text-container-inner">
                 <h2 class="tm-hero-title">My Perfect Spaces</h2>
                 <p class="tm-hero-subtitle">
                     We Shape Home for The Living
                     <br />
                 </p>
+            </div> -->
+            <div class="article">
+                <form class="text-center" name="submit-to-google-sheet">
+                    <ul>
+                        <li class="list-qotation">
+                            <p class="Heading-qotation">Get an Estimate!</p>
+                        </li>
+                        <li class="list-qotation">
+                            <input name="Name" type="name" placeholder="Enter Your Name" size="20">
+                        </li>
+                        <li class="list-qotation">
+                            <input name="Email" type="email" placeholder="Enter Your Email" size="20">
+                        </li>
+                        <li class="list-qotation">
+                            <input name="Mobile" type="tel" placeholder="Enter Your Mobile No." maxlength="10" size="20">
+                            <div class=get-hori>
+                                <input name="Whatsapp" type="checkbox" value="true" onchange="if(this.checked) this.value='true'; else this.value='false';name=whatsapp">
+                                <p class="hints">notify me on What's App</p>
+                            </div class=get-hori>
+                        </li>
+                        <li class="list-qotation">
+                            <input name="Building" type="text" placeholder="Appartment/Building" size="20">
+                        </li>
+                        <li class="list-qotation">
+                            <input name="Budget" type="text" placeholder="Budget" size="20">
+                        </li>
+                        <li class="list-qotation">
+                            <button type="submit">Submit</button>
+                        </li>
+                    </ul>
+                </form>
+
+                <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+                <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+                <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+
+                <script>
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbxNe6XeEwZnlS-EwnGvJ3B0c-O2mjsCeKLyEIYN0T7DucP96xaD/exec'
+                    const form = document.forms['submit-to-google-sheet']
+
+                    form.addEventListener('submit', e => {
+                        e.preventDefault()
+                        fetch(scriptURL, {
+                                method: 'POST',
+                                body: new FormData(form)
+                            })
+                            .then(response => console.log('Success!', response))
+                            .catch(error => console.error('Error!', error.message))
+                    })
+                </script>
             </div>
         </div>
 
-        <div class="tm-next tm-intro-next">
+        <!-- <div class="tm-next tm-intro-next">
             <a href="#introduction" class="text-center tm-down-arrow-link">
                 <i class="fas fa-3x fa-caret-down tm-down-arrow"></i>
             </a>
-        </div>
+        </div> -->
     </section>
 
     <section id="introduction" class="tm-section-pad-top">
@@ -81,7 +138,8 @@
                             Introduction
                         </h2>
                         <p class="mb-3 tm-intro-text">
-                            Everyone wants home where they can live happily with his family.The Designers working in <strong>My Perfect Spaces</strong> are the best interior design in modern time.
+                            Everyone wants home where they can live happily with his family.The Designers working in
+                            <strong>My Perfect Spaces</strong> are the best interior design in modern time.
                         </p>
                         <p class="mb-3 tm-intro-text">
                             <strong>My Perfect Spaces</strong> has got very strong ethics which do not allow them to compromise with the work that they deliver to there client. So, if <strong> YOU </strong> are looking for interior Designers feel free
@@ -312,8 +370,7 @@
                 <div class="col-sm-12 col-md-6 d-flex align-items-center
               tm-contact-item">
                     <form action="" method="get">
-                        <input name="email" type="email" placeholder="Subscribe your
-                  email" class="tm-input" required />
+                        <input name="email" type="email" placeholder="Subscribe your email" class="tm-input" required />
                         <button type="submit" class="btn tm-btn-submit">Submit</button>
                     </form>
                 </div>

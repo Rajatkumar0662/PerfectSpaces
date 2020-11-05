@@ -1,0 +1,146 @@
+.header-1 {
+    background-image: linear-gradient(black, white 200%);
+    height: fit-content;
+    padding: 10px;
+}
+
+input::-webkit-input-placeholder {
+    font-size: small;
+    color: rgba(136, 136, 136, 0.452);
+}
+
+input:focus::-webkit-input-placeholder {
+    font-size: small;
+    color: rgba(136, 136, 136, 0.452);
+}
+
+
+/* logo section */
+
+.logo {
+    left: 5px;
+    content: icon;
+    width: 350px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo img {
+    padding: 10px;
+    width: 350px;
+    align-self: center;
+}
+
+
+/* #logo-text-1 {
+    height: fit-content;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0px;
+    font-size: 17pt;
+    font-weight: 400;
+    letter-spacing: 0.3mm;
+    color: rgb(5, 170, 240);
+}
+
+#logo-text-2 {
+    height: fit-content;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0px;
+    font-size: 9pt;
+    font-weight: lighter;
+    letter-spacing: 0.3mm;
+    color: white
+} */
+
+
+/* 
+.article {
+    position: fixed;
+    justify-content: center;
+    vertical-align: bottom;
+    margin: 15% 10% 0% 10%;
+    padding: 10px;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.158);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px) brightness(0.8);
+} */
+
+
+/* form section */
+
+.article {
+    justify-content: center;
+    vertical-align: bottom;
+    margin: 15% 10% 0% 10%;
+    padding: 10px;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.158);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px) brightness(0.8);
+}
+
+.article form ul {
+    list-style: none;
+    align-content: center;
+    margin: 10px;
+    width: fit-content;
+    padding: 5px;
+}
+
+.list-qotation {
+    padding: 5px;
+    text-align: center;
+}
+
+.list-qotation input {
+    font-size: small;
+    appearance: textfield;
+    width: 200pt;
+    height: fit-content;
+    border: 0px;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.list-qotation button {
+    margin: 15px;
+    height: auto;
+    color: white;
+    background-color: rgb(5, 170, 240);
+    width: 70%;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: medium;
+}
+
+.Heading-qotation {
+    font-size: 20pt;
+    word-spacing: 5pt;
+    text-align: left;
+}
+
+.get-hori {
+    bottom: 0;
+    margin: 0px 0px 0px 12px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.get-hori input {
+    margin: 5px 0px;
+    width: fit-content;
+}
+
+.hints {
+    margin: 0 0 0 3px;
+    padding: 2px;
+    vertical-align: middle;
+    font-size: 8pt;
+}
